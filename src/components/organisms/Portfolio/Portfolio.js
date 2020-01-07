@@ -4,12 +4,10 @@ import Navbar from '../../molecules/Navbar';
 
 import ImageThumbnail from '../../atoms/ImageThumbnail';
 
-import Card from '../../atoms/Card';
+import { Card } from '../../molecules';
 import CardInverse from '../../atoms/CardInverse';
-import CardTitle from '../../atoms/CardTitle';
 import Container from '../../atoms/Container';
 import ImageEnlarged from '../../atoms/ImageEnlarged';
-import CardScroll from '../../atoms/CardScroll';
 
 import { mannequinns, windows } from '../../../images';
 
@@ -22,10 +20,9 @@ function Portfolio() {
       <CardInverse>
         <ImageEnlarged src={currentImage} />
       </CardInverse>
-      <Card>
+      <div>
         <Navbar />
-        <CardTitle>Portfolio</CardTitle>
-        <CardScroll>
+        <Card title="Portfolio">
           {imageSet.map(image => {
             return (
               <ImageThumbnail
@@ -38,8 +35,9 @@ function Portfolio() {
               />
             );
           })}
-        </CardScroll>
-      </Card>
+        </Card>
+
+      </div>
     </Container>
   );
 }
