@@ -1,15 +1,9 @@
 import React, { useState } from 'react';
 
-import Navbar from '../../molecules/Navbar';
-
-import ImageThumbnail from '../../atoms/ImageThumbnail';
-
-import { Card } from '../../molecules';
-import CardInverse from '../../atoms/CardInverse';
+import { Card, Navbar, EnlargedImage } from '../../molecules';
 import Container from '../../atoms/Container';
-import ImageEnlarged from '../../atoms/ImageEnlarged';
-
-import { mannequinns, windows } from '../../../images';
+import ImageThumbnail from '../../atoms/ImageThumbnail';
+import { mannequinns } from '../../../images';
 
 function Portfolio() {
   const [imageSet, setImageSet] = useState(mannequinns);
@@ -17,26 +11,28 @@ function Portfolio() {
 
   return (
     <Container>
-      <CardInverse>
-        <ImageEnlarged src={currentImage} />
-      </CardInverse>
+      <EnlargedImage src={currentImage} />
       <div>
-        <Navbar />
-        <Card title="Portfolio">
-          {imageSet.map(image => {
+        <Navbar
+          imageSet={imageSet}
+          setImageSet={setImageSet}
+          setCurrentImage={setCurrentImage}
+        />
+
+        <Card>
+          {imageSet.map(({ source, id }) => {
             return (
               <ImageThumbnail
                 onClick={() => {
-                  setCurrentImage(image.source);
+                  setCurrentImage(source);
                 }}
-                key={image.id}
-                src={image.source}
+                key={id}
+                src={source}
                 alt='thumbnail'
               />
             );
           })}
         </Card>
-
       </div>
     </Container>
   );

@@ -1,13 +1,10 @@
 import React from 'react';
-import { CardShell, CardTitle, CardScroll } from '../atoms';
+import { CardShell, CardScroll } from '../atoms';
 
 export default ({ title, children }) => {
   return (
     <CardShell>
-      <CardTitle>{title}</CardTitle>
-      <CardScroll>
-        {children}
-      </CardScroll>
+      <CardScroll>{children}</CardScroll>
     </CardShell>
-  )
-}
+  );
+};

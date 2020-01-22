@@ -1,10 +1,3 @@
-export const images = [
-  { id: 1, source: '/images/image1.jpg' },
-  { id: 2, source: '/images/image2.jpg' },
-  { id: 3, source: '/images/image3.jpg' },
-  { id: 4, source: '/images/image4.jpg' }
-];
-
 export const mannequinns = [
   { id: 1, source: '/images/mannequinns/image1.jpg' },
   { id: 2, source: '/images/mannequinns/image2.jpg' },
@@ -38,4 +31,19 @@ export const windows = [
   { id: 10, source: '/images/windows/image10.jpg' },
   { id: 11, source: '/images/windows/image11.jpg' },
   { id: 12, source: '/images/windows/image12.jpg' }
+];
+
+export const displays = [
+  { id: 1, source: '/images/displays/image1.jpg' },
+  { id: 2, source: '/images/displays/image2.jpg' },
+  { id: 3, source: '/images/displays/image3.jpg' },
+  { id: 4, source: '/images/sdisplays/image4.jpg' },
+  { id: 5, source: '/images/displays/image5.jpg' },
+  { id: 6, source: '/images/displays/image6.jpg' },
+  { id: 7, source: '/images/displays/image7.jpg' },
+  { id: 8, source: '/images/displays/image8.jpg' },
+  { id: 9, source: '/images/displays/image9.jpg' },
+  { id: 10, source: '/images/displays/image10.jpg' },
+  { id: 11, source: '/images/displays/image11.jpg' },
+  { id: 12, source: '/images/displays/image12.jpg' }
 ];

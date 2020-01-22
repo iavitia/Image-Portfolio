@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-const ImageThumbnail = styled.img`
-  max-width: 10vw;
+export default styled.img`
+  width: 300px;
   cursor: pointer;
 `;
-
-export default ImageThumbnail;
